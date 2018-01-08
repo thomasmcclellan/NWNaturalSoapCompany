@@ -269,7 +269,10 @@
     $('.accordionDrop').hide();
     $('.accordion').on('click',function(){
       $(this).next().slideToggle('slow');
-    })
+
+      let el = $(this);
+      el.text() == el.data('text-swap') ? el.text(el.data('text-original')) : el.text(el.data('text-swap'));
+    });
   })
 
 })(jQuery);
